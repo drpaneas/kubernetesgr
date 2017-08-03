@@ -2,7 +2,7 @@
 title: Home
 ---
 
-[<img src="http://i.imgur.com/3I9jkTx.jpg" sftyle="max-width:15%;min-width:40px;float:right;" alt="Github repo" />](https://github.com/goodroot/hugo-classic)
+[<img src="https://kubernetes.gr/3I9jkTx.jpg" sftyle="max-width:15%;min-width:40px;float:right;" alt="Kubernetes Greek Community" />](https://kubernetes.gr)
 
 # Ελληνική Κοινότητα Kubernetes
 
