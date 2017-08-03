@@ -1,0 +1,3 @@
+[submodule "themes/classic_fork"]
+	path = themes/classic_fork
+	url = https://github.com/drpaneas/hugo-classic
