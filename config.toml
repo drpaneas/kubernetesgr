@@ -2,8 +2,8 @@ baseurl = "https://www.kubernetes.gr/"
 languageCode = "en-us"
 title = "kubernetes.gr"
 theme = "classic_fork"
-googleAnalytics = ""
-disqusShortname = ""
+googleAnalytics = "UA-60257842-2"
+disqusShortname = "PanosGeorgiadis"
 ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
 preserveTaxonomyNames = true
 footnotereturnlinkcontents = "↩"
@@ -29,4 +29,4 @@ footnotereturnlinkcontents = "↩"
 
 [params]
     description = "Ελληνική Κοινότητα Kubernetes"
-    footer = "Open-Source | [Github](https://github.com/goodroot/hugo-classic) | [Twitter](https://twitter.com/thegoodroot)"
+    footer = "Γράψε το δικό σου άρθρο | [Github](https://github.com/drpaneas/kubernetesgr) | [Twitter](https://twitter.com/kubernetesgr)"
