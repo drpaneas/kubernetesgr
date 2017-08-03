@@ -1,4 +1,4 @@
-baseurl = "https://kubernetes.gr/"
+baseurl = "https://www.kubernetes.gr/"
 languageCode = "en-us"
 title = "kubernetes.gr"
 theme = "classic_fork"
