@@ -1,7 +1,7 @@
 baseurl = "http://37.187.99.56/blog/public/"
 languageCode = "en-us"
 title = "kubernetes.gr"
-theme = "classic"
+theme = "classic_fork"
 googleAnalytics = ""
 disqusShortname = ""
 ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
