@@ -3,64 +3,64 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://37.187.99.56/blog/public/post/2017/05/08/kubernetes-basics/</loc>
+    <loc>http://kubernetes.gr/post/2017/05/08/kubernetes-basics/</loc>
     <lastmod>2017-05-08T22:08:35+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://37.187.99.56/blog/public/categories/</loc>
+    <loc>http://kubernetes.gr/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://37.187.99.56/blog/public/tags/cluster/</loc>
-    <lastmod>2017-05-08T22:08:35+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://37.187.99.56/blog/public/tags/containers/</loc>
+    <loc>http://kubernetes.gr/tags/cluster/</loc>
     <lastmod>2017-05-08T22:08:35+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://37.187.99.56/blog/public/tags/docker/</loc>
+    <loc>http://kubernetes.gr/tags/containers/</loc>
     <lastmod>2017-05-08T22:08:35+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://37.187.99.56/blog/public/</loc>
-    <lastmod>2017-05-08T22:08:35+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://37.187.99.56/blog/public/tags/kubernetes/</loc>
+    <loc>http://kubernetes.gr/tags/docker/</loc>
     <lastmod>2017-05-08T22:08:35+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://37.187.99.56/blog/public/post/</loc>
+    <loc>http://kubernetes.gr/</loc>
+    <lastmod>2017-05-08T22:08:35+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://kubernetes.gr/tags/kubernetes/</loc>
     <lastmod>2017-05-08T22:08:35+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://37.187.99.56/blog/public/tags/</loc>
+    <loc>http://kubernetes.gr/post/</loc>
     <lastmod>2017-05-08T22:08:35+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://37.187.99.56/blog/public/tags/tutorial/</loc>
+    <loc>http://kubernetes.gr/tags/</loc>
     <lastmod>2017-05-08T22:08:35+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://37.187.99.56/blog/public/categories/tutorial/</loc>
+    <loc>http://kubernetes.gr/tags/tutorial/</loc>
+    <lastmod>2017-05-08T22:08:35+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://kubernetes.gr/categories/tutorial/</loc>
     <lastmod>2017-05-08T22:08:35+02:00</lastmod>
     <priority>0</priority>
   </url>

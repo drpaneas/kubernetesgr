@@ -1,4 +1,4 @@
-baseurl = "http://37.187.99.56/blog/public/"
+baseurl = "http://kubernetes.gr"
 languageCode = "en-us"
 title = "kubernetes.gr"
 theme = "classic_fork"

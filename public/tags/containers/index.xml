@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Containers on kubernetes.gr</title>
-    <link>http://37.187.99.56/blog/public/tags/containers/</link>
+    <link>http://kubernetes.gr/tags/containers/</link>
     <description>Recent content in Containers on kubernetes.gr</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 08 May 2017 22:08:35 +0200</lastBuildDate>
     
-	<atom:link href="http://37.187.99.56/blog/public/tags/containers/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://kubernetes.gr/tags/containers/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Kubernetes Basics</title>
-      <link>http://37.187.99.56/blog/public/post/2017/05/08/kubernetes-basics/</link>
+      <link>http://kubernetes.gr/post/2017/05/08/kubernetes-basics/</link>
       <pubDate>Mon, 08 May 2017 22:08:35 +0200</pubDate>
       
-      <guid>http://37.187.99.56/blog/public/post/2017/05/08/kubernetes-basics/</guid>
+      <guid>http://kubernetes.gr/post/2017/05/08/kubernetes-basics/</guid>
       <description>What is Kubernetes By definition, Kubernetes is an open source container cluster manager, and it is usually referred to by its internal name withing Google development - k8s. Google donated it to the open source world as a &amp;ldquo;seed technology&amp;rdquo; at 2015, to the newly formed CNCF - Cloud Native Computing Foundation, which established partnership with The Linux Foundation. The primary goal of Kubernetes is to provide a platform for automating deployment, scaling and operations of application containers across a cluster of hosts.</description>
     </item>
     
