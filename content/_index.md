@@ -8,6 +8,6 @@ title: Home
 
 ### Καλώς ήρθατε στον ελληνικό Κυβερνήτη!
 
-To [Kubernetes](https://kubernetes.gr) είναι ένα σύστημα ανοιχτού λογισμικού για αυτόματο deployment, scaling και διαχείριση των containerized εφαρμογών. 
+To [Kubernetes](https://kubernetes.io/) είναι ένα σύστημα ανοιχτού λογισμικού για αυτόματο deployment, scaling και διαχείριση των containerized εφαρμογών. 
 
 ### Διαβάστε:
