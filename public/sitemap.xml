@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://37.187.99.56/blog/public/post/2017/05/08/kubernetes-basics/</loc>
+    <lastmod>2017-05-08T22:08:35+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://37.187.99.56/blog/public/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://37.187.99.56/blog/public/tags/cluster/</loc>
+    <lastmod>2017-05-08T22:08:35+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://37.187.99.56/blog/public/tags/containers/</loc>
+    <lastmod>2017-05-08T22:08:35+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://37.187.99.56/blog/public/tags/docker/</loc>
+    <lastmod>2017-05-08T22:08:35+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://37.187.99.56/blog/public/</loc>
+    <lastmod>2017-05-08T22:08:35+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://37.187.99.56/blog/public/tags/kubernetes/</loc>
+    <lastmod>2017-05-08T22:08:35+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://37.187.99.56/blog/public/post/</loc>
+    <lastmod>2017-05-08T22:08:35+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://37.187.99.56/blog/public/tags/</loc>
+    <lastmod>2017-05-08T22:08:35+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://37.187.99.56/blog/public/tags/tutorial/</loc>
+    <lastmod>2017-05-08T22:08:35+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://37.187.99.56/blog/public/categories/tutorial/</loc>
+    <lastmod>2017-05-08T22:08:35+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

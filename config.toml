@@ -1,0 +1,32 @@
+baseurl = "http://37.187.99.56/blog/public/"
+languageCode = "en-us"
+title = "kubernetes.gr"
+theme = "classic"
+googleAnalytics = ""
+disqusShortname = ""
+ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
+preserveTaxonomyNames = true
+footnotereturnlinkcontents = "↩"
+
+[permalinks]
+    post = "/post/:year/:month/:day/:slug/"
+
+#[[menu.main]]
+#    name = "αρχική"
+#    url = "/"
+#    weight = 1
+[[menu.main]]
+    name = "κατηγορίες"
+    url = "/categories/"
+    weight = 1
+[[menu.main]]
+    name = "Tags"
+    url = "/tags/"
+    weight = 2
+[[menu.feed]]
+    name = "rss"
+    url = "/index.xml"
+
+[params]
+    description = "Ελληνική Κοινότητα Kubernetes"
+    footer = "Open-Source | [Github](https://github.com/goodroot/hugo-classic) | [Twitter](https://twitter.com/thegoodroot)"
