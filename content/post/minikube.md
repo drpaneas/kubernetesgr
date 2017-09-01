@@ -429,7 +429,7 @@ Kubernetes, όπως τoν API Server και της web console.
 Windows
 -------
 
-Προς το παρών, δουλεύουμε σε ένα PC με `Windows 10`,
+Προς το παρόν, δουλεύουμε σε ένα PC με `Windows 10`,
 στο οποίο προϋπάρχει ήδη η απαραίτητη υποδομή 
 λογισμικού για την δημιουργία και τη διαχείριση
 εικονικών μηχανών `VirtualBox`.
@@ -458,4 +458,226 @@ Windows
 
 ![CMD Windows](/static/cmd.JPG)
 
+Δεν ξεχνάμε όμως να δώσουμε και την ακόλουθη εντολή,
+η οποία θα προσθέσει τον κατάλογο `C:\minikube` στο `PATH`.
+O λόγος που το κάνουμε αυτό είναι γιατί θέλουμε να αποφύγουμε
+να γράφουμε διαρκώς το πλήρες directory που βρίσκεται το
+εκτελέσιμο του minikube.
 
+```bash
+C:\Users\drpan>PATH %PATH%;C:\minikube
+```
+
+**Σημείωση:** Η παραπάνω εντολή δεν είναι μόνιμη, αλλά θα
+προσθέσει το συγκεκριμένο κατάλογο μόνο κατά το τρέχων
+στιγμιότυπο της γραμμής εντολών. Αν κλείσατε ή ανοίξατε
+κάποιο άλλο `cmd`, τότε θα πρέπει να την ξαναδώσετε.
+
+Το πρόγραμμα virtualization που θα χρησιμοποιήσουμε είναι
+το [VirtualBox](https://www.virtualbox.org/).
+Σε περίπτωση που δεν έχετε ασχοληθεί ξανά
+με αυτό, σας προτείνουμε να ρίξετε μια ματιά [σ’ αυτό](https://deltahacker.gr/vbox-based-virtuallab/)
+το άρθρο. Ήρθε η ώρα για να τρέξουμε το minikube,
+πάμε λοιπόν στο παράθυρο της γραμμής εντολών και
+πληκτρολογούμε το εξής:
+
+```bash
+minikube start --vm-driver=virtualbox
+```
+
+*Output*
+
+```bash
+========================================
+kubectl could not be found on your path. kubectl is a requirement for using minikube
+To install kubectl, please do the following:
+
+download kubectl from:
+https://storage.googleapis.com/kubernetes-release/release/v1.7.0/bin/windows/amd64/kubectl.exe
+Add kubectl to your system PATH
+
+To disable this message, run the following:
+
+minikube config set WantKubectlDownloadMsg false
+========================================
+Starting local Kubernetes v1.7.0 cluster...
+Starting VM...
+Downloading Minikube ISO
+ 97.80 MB / 97.80 MB [==============================================] 100.00% 0s
+Getting VM IP address...
+Moving files into cluster...
+Setting up certs...
+Starting cluster components...
+Connecting to cluster...
+Setting up kubeconfig...
+Kubectl is now configured to use the cluster.
+```
+
+Κατά την διάρκεια της παραπάνω διαδικασίας,
+ενδέχεται να σας ζητηθεί να δώσετε την **έγκρισή**
+σας στο minikube να χρησιμοποιήσει το virtualbox.
+Σε αυτή την περίπτωση εμείς αποδεχτήκαμε αυτή την
+πρόταση και παραχωρήσαμε πλήρη δικαιώματα στο
+minikube όσον αφορά το virtualbox. Κάνοντας το,
+θα δείτε ότι το minikube θα φτιάξει μία εικονική
+μηχανή, η οποία δεν θα είναι άλλη από το 
+`single-node k8s cluster` που θέλουμε να φτιάξουμε.
+
+![virtualbox image](/static/virtualbox.JPG)
+
+Στην περίπτωση που νιώθετε μια ακατανίκητη επιθυμία
+εξερεύνησης αυτού το VM, αρκεί να σας πούμε ότι
+χρησιμοποιεί *password-less* root login:
+
+![virtualbox root login](/static/virtualbox_minikube_vm.JPG)
+
+Αλληλεπίδραση με το cluster
+---------------------------
+
+Καθώς ξεκινήσαμε το minikube, θυμόμαστε ότι μας
+ενημέρωσε πως το `kubectl` δεν είναι εγκατεστημένο
+στο σύστημά μας. Στην περίπτωση που έχουμε  OSX ή
+Linux, το Minikube λύνει μόνο του αυτό το πρόβλημα,
+αλλά δυστυχώς δεν ισχύει το ίδιο στην περίπτωση των
+Windows.
+
+```bash
+kubectl could not be found on your path. kubectl is a requirement for using minikube
+To install kubectl, please do the following:
+
+download kubectl from:
+https://storage.googleapis.com/kubernetes-release/release/v1.7.0/bin/windows/amd64/kubectl.exe
+Add kubectl to your system PATH
+```
+
+Για να λύσουμε αυτό το πρόβλημα, θα ακολουθήσουμε
+τις οδηγίες που μας έδωσε το ίδιο το minikube,
+δηλαδή θα κατεβάσουμε το **kubectl** από την [διεύθυνση](https://storage.googleapis.com/kubernetes-release/release/v1.7.0/bin/windows/amd64/kubectl.exe)
+που μας υπέδειξε νωρίτερα. Σε αυτό το σημείο, θα θέλαμε
+να σας τονίσουμε να **μην χρησιμοποιήσετε** το URL που
+έχουμε στο άρθρο, αλλά αυτό που σας υπέδειξε το Minikube
+στον υπολογιστή σας. Έτσι θα έχετε πάντα την *νεώτερη*
+έκδοση του kubectl. 
+
+Αφού κατέβει, στην συνέχεια, για λόγους τακτοποίησης
+θα το τοποθετήσουμε στον ίδιο κατάλογο `C:/minikube`
+μαζί με το `minikube.exe`, το οποίο το έχουμε ήδη
+προσθέσει το `PATH` μας.
+
+![Windows 10 Minikube Directory](/static/windows10.JPG)
+
+Συγχαρητήρια! Πλέον είμαστε σε θέση και μπορούμε να
+ξεκινήσουμε την αλληλεπίδραση με το k8s cluster μας.
+Πηγαίνουμε πάλι πίσω στο παράθυρο της γραμμή εντολών
+και δίνουμε την εντολή:
+
+```bash
+kubectl cluster-info 
+Kubernetes master is running at https://192.168.99.100:8443
+To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
+```
+
+Όπως βλέπετε, το `kubectl` (client) κατάφερε και
+επικοινώνησε επιτυχγημένα με το `k8s API` (server)
+και μας ενημέρωσε πως τρέχει στην διεύθυνση του
+τοπικού μας δικτύου *192.168.99.100* και στην θύρα
+*8443*.
+
+Όπως είπαμε και στην αρχή, το συγκεκριμένο cluster
+είναι *single-node* και έχει καθαρά εκπαιδευτικό
+χαρακτήρα. Για δούμε πόσα nodes έχει το cluster μας,
+δίνουμε την εντολή:
+
+```bash
+kubectl get nodes
+NAME       STATUS    AGE       VERSION
+minikube   Ready     4h        v1.7.0
+```
+
+Πράγματι, το cluster μας αποτελείται από μονάχα έναν
+node, με το πρωτότυπο όνομα  minikube. Πλέον μπορείτε
+να πειραματιστείτε ελεύθερα χωρίς φόβο και πάθος,
+χρησιμοποιώντας είτε το kubectl είτε το ίδιο το
+minikube. Για να δείτε τις επιλογές που σας παρέχει,
+χρησιμοποιείστε τη --help flag ώς εξής:
+
+```bash
+minikube --help
+
+Usage:
+  minikube [command]
+
+Available Commands:
+  addons           Modify minikube's kubernetes addons
+  completion       Outputs minikube shell completion for the given shell (bash)
+  config           Modify minikube config
+  dashboard        Opens/displays the kubernetes dashboard URL for your local cluster
+  delete           Deletes a local kubernetes cluster
+  docker-env       Sets up docker env variables; similar to '$(docker-machine env)'
+  get-k8s-versions Gets the list of available kubernetes versions available for minikube
+  ip               Retrieves the IP address of the running cluster
+  logs             Gets the logs of the running localkube instance, used for debugging minikube, not user code
+  mount            Mounts the specified directory into minikube
+  profile          Profile sets the current minikube profile
+  service          Gets the kubernetes URL(s) for the specified service in your local cluster
+  ssh              Log into or run a command on a machine with SSH; similar to 'docker-machine ssh'
+  ssh-key          Retrieve the ssh identity key path of the specified cluster
+  start            Starts a local kubernetes cluster
+  status           Gets the status of a local kubernetes cluster
+  stop             Stops a running local kubernetes cluster
+  update-context   Verify the IP address of the running cluster in kubeconfig.
+  version          Print the version of minikube
+```
+
+Οι παραπάνω εντολές, είναι στην ουσία ένας σύντομος
+και εύκολος τρόπος να κάνετε τα ίδια πράγματα που
+θα κάνατε χρησιμοποιώντας το `kubectl`, αλλά με το
+minikube. Για παράδειγμα αν θέλαμε να φορτώσουμε
+το [Kubernetes dashboard](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/),
+με τον επίσημο τρόπο, θα δίναμε την εντολή:
+
+```bash
+kubectl create -f https://rawgit.com/kubernetes/dashboard/master/src/deploy/kubernetes-dashboard.yaml
+```
+
+και στην συνέχεια θα έπρεπε να κάνουμε `port-forward`
+χρησιμοποιώντας το `kube-proxy`:
+
+```bash
+$ kubectl proxy
+```
+
+Αν και μπορούμε κάλλιστα να τα κάνουμε όλα αυτά,
+το minikube είναι στην ευχάριστη θέση να τα κάνει
+για εμάς, δίνοντας του την εξής εντολή:
+
+```bash
+C:\Users\drpan>minikube dashboard
+Opening kubernetes dashboard in default browser...
+```
+
+Στην περίπτωσή μας, άνοιξε το Google Chrome
+στην διεύθυνση `http://192.168.99.100:30000/`
+
+![Kubernetes Dashboard Namespaces](/static/cluster_namespaces.JPG)
+
+![Kubernetes Dashboard Workloads](/static/workloads.JPG)
+
+Tέλος, για να κλείσουμε προσωρινά το minikube τρέχουμε την εντολή:
+
+```bash
+C:\Users\drpan>minikube stop
+Stopping local Kubernetes cluster... 
+Machine stopped.
+```
+
+Ενώ αν θέλουμε να διαγράψουμε τελείως το πρόσφατο
+τοπικό cluster μας, δίνουμε την εντολή `minikube delete`:
+
+```bash
+C:\minikube>minikube.exe delete
+Deleting local Kubernetes
+Machine deleted
+```
+
+Καλή σας διασκέδαση :)
