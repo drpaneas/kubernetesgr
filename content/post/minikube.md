@@ -451,12 +451,12 @@ Windows
 στην συνέχεια πληκτρολογούμε την φράση: `cmd.exe`. Τέλος,
 κάνουμε κλικ στο κουμπί `OK`.
 
-![Windows Run](/static/cmd_exe.JPG)
+![Windows Run](/cmd_exe.JPG)
 
 Άνοιξε το παράθυρο της γραμμής εντολών, γεγονός που
 σημαίνει ότι τα καταφέραμε.
 
-![CMD Windows](/static/cmd.JPG)
+![CMD Windows](/cmd.JPG)
 
 Δεν ξεχνάμε όμως να δώσουμε και την ακόλουθη εντολή,
 η οποία θα προσθέσει τον κατάλογο `C:\minikube` στο `PATH`.
@@ -523,13 +523,13 @@ minikube όσον αφορά το virtualbox. Κάνοντας το,
 μηχανή, η οποία δεν θα είναι άλλη από το 
 `single-node k8s cluster` που θέλουμε να φτιάξουμε.
 
-![virtualbox image](/static/virtualbox.JPG)
+![virtualbox image](/virtualbox.JPG)
 
 Στην περίπτωση που νιώθετε μια ακατανίκητη επιθυμία
 εξερεύνησης αυτού το VM, αρκεί να σας πούμε ότι
 χρησιμοποιεί *password-less* root login:
 
-![virtualbox root login](/static/virtualbox_minikube_vm.JPG)
+![virtualbox root login](/virtualbox_minikube_vm.JPG)
 
 Αλληλεπίδραση με το cluster
 ---------------------------
@@ -564,7 +564,7 @@ Add kubectl to your system PATH
 μαζί με το `minikube.exe`, το οποίο το έχουμε ήδη
 προσθέσει το `PATH` μας.
 
-![Windows 10 Minikube Directory](/static/windows10.JPG)
+![Windows 10 Minikube Directory](/windows10.JPG)
 
 Συγχαρητήρια! Πλέον είμαστε σε θέση και μπορούμε να
 ξεκινήσουμε την αλληλεπίδραση με το k8s cluster μας.
@@ -659,9 +659,9 @@ Opening kubernetes dashboard in default browser...
 Στην περίπτωσή μας, άνοιξε το Google Chrome
 στην διεύθυνση `http://192.168.99.100:30000/`
 
-![Kubernetes Dashboard Namespaces](/static/cluster_namespaces.JPG)
+![Kubernetes Dashboard Namespaces](/cluster_namespaces.JPG)
 
-![Kubernetes Dashboard Workloads](/static/workloads.JPG)
+![Kubernetes Dashboard Workloads](/workloads.JPG)
 
 Tέλος, για να κλείσουμε προσωρινά το minikube τρέχουμε την εντολή:
 
