@@ -13,6 +13,29 @@ tags = [
 ]
 +++
 
+- [Εισαγωγή](#Εισαγωγή)
+  * [Λίγα λόγια για το Minikube](#Λίγα λόγια για το Minikube)
+  * [Πώς λειτουργεί πίσω από την μηχανή](#Πώς λειτουργεί πίσω από την μηχανή)
+- [Εγκατάσταση του Minikube](#Εγκατάσταση του Minikube)
+  * [Linux](#linux)
+  * [Mac OSX](#mac-osx)
+  * [Windows](#windows)
+- [Εγκαταστήστε τον Kubernetes client (kubectl)](#Εγκαταστήστε τον Kubernetes client -kubectl-)
+  * [Linux](#linux-1)
+  * [Mac OSX](#mac-osx-1)
+- [Ξεκινήστε το Kubernetes cluster με το Minikube](#Ξεκινήστε το Kubernetes cluster με το Minikube)
+  * [Χρησιμοποιώντας το VirtualBox](#Χρησιμοποιώντας το VirtualBox)
+  * [Με docker έναντι του VirtualBox](#Με docker έναντι του VirtualBox)
+  * [Με KVM έναντι του VirtualBox](#Με KVM έναντι του VirtualBox)
+- [Ελέγξετε αν το cluster σηκώθηκε και μπορεί να επικοινωνήσει με το kubectl](#[Ελέγξετε αν το cluster σηκώθηκε και μπορεί να επικοινωνήσει με το kubectl)
+- [Αναλυτικές οδηγίες για χρήστες Windows (και όχι μόνο)](#Αναλυτικές οδηγίες για χρήστες Windows -και όχι μόνο-)
+  * [Εγκατάσταση του Minikube](#Εγκατάσταση του Minikube-1)
+  * [Minikube και VirtualBox](#Minikube και VirtualBox)
+  * [Αλληλεπίδραση με το cluster](#Αλληλεπίδραση με το cluster)
+  * [Φορτώνοντας το Dashboard](#Φορτώνοντας το Dashboard)
+
+# Εισαγωγή
+
 Το στήσιμο ενός **Kubernetes cluster** δεν είναι εύκολη υπόθεση, ειδικά 
 όταν στο σενάριο αυτής αναφερόμαστε σε πράγματα όπως το HA *(High
 Availability)*. Ξεκινώντας **από το μηδέν** και δουλεύοντας 
@@ -27,8 +50,7 @@ Availability)*. Ξεκινώντας **από το μηδέν** και δουλ�
 cluster, έτσι ώστε να πειραματιστούμε και να δοκιμάσουμε οτιδήποτε
 μας κινεί το ενδιαφέρον γύρω του.
 
-Λίγα λόγια για το Minikube
---------------------------
+## Λίγα λόγια για το Minikube
 
 Αν και υπάρχουν πάρα πολλοί τρόποι να εγκαταστήσει κανείς ένα k8s
 cluster, εμείς επιλέξαμε το [minikube](https://github.com/kubernetes/minikube)
@@ -65,8 +87,7 @@ cluster, θα τρέχει **πάντα** την **πιο πρόσφατη έκ�
 γύρω από το Kubernetes, αλλά θα είστε ενήμεροι ακόμα και για
 τις τελευταίες εξελίξεις γύρω από αυτό.
 
-Πώς λειτουργεί πίσω από την μηχανή
-----------------------------------
+## Πώς λειτουργεί πίσω από την μηχανή
 
 Όπως είπαμε στην αρχή, υπάρχουν πάρα πολλοί τρόποι να εγκαταστήσει
 κανείς ένα kubernetes cluster, οι περισσότεροι εκ των οποίων
@@ -170,8 +191,7 @@ minikube -> libmachine -> virtualbox ή KVM -> linux VM -> localkube
 ```
 
 
-Εγκατάσταση του Minikube
-------------------------
+# Εγκατάσταση του Minikube
 
 Το Minikube είναι ένα απλό εκτελέσιμο (binary) το οποίο απλά πρέπει
 να το κατεβάσουμε και να το συμπεριλάβουμε στην μεταβλητή `PATH`.
@@ -183,6 +203,8 @@ minikube -> libmachine -> virtualbox ή KVM -> linux VM -> localkube
 σας συμβουλεύουμε να δείτε [αυτό](https://www.youtube.com/watch?v=J4_K8I8zdIo)
 το επεξηγηματικό βίντεο. Οι οδηγίες για την εγκατάσταση βρίσκονται
 στο [ίδιο](https://github.com/kubernetes/minikube) το GitHub repository.
+
+## Linux
 
 Για την ακρίβεια, η όλη διαδικασία στο Linux και το OSX είναι μία
 εντολή (ναι, καλά διαβάσατε).
@@ -200,6 +222,8 @@ curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/miniku
 * Το μεταφέρουμε στο κλασσικό directory (που βρίσκεται ήδη
 στο PATH μας) μαζί με τα υπόλοιπα binaries του normal user
 
+## Mac OSX
+
 Στο `OSX` μπορούμε να κάνουμε την ακριβώς ίδια διαδικασία,
 με την μόνη διαφορά ότι πρέπει να αλλάξουμε την λέξη `‘linux’`
 με την λέξη `‘darwin’`.
@@ -216,6 +240,8 @@ curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/miniku
 [αυτές](https://gist.github.com/kevin-smets/b91a34cea662d0c523968472a81788f7)
 τις οδηγίες.
 
+## Windows
+
 Στα `Windows`, ο χρήστης πρέπει να κάνει όλα τα παραπάνω
 βήματα, χρησιμοποιώντας το [εκτελέσιμο
 αρχείο](https://storage.googleapis.com/minikube/releases/latest/minikube-windows-amd64.exe)
@@ -225,8 +251,7 @@ curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/miniku
 αναλυτικά βήματα στο τέλος του άρθρου.
 
 
-Εγκαταστήστε τον Kubernetes client (kubectl)
---------------------------------------------
+# Εγκαταστήστε τον Kubernetes client (kubectl)
 
 Προκείμενου να αλληλεπιδράσουμε με το Kubernetes, χρειαζόμαστε
 επίσης και τον `kubectl`, o οποίος δεν είναι τίποτα περισσότερο
@@ -234,17 +259,20 @@ curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/miniku
 γραμμής εντολών. Ξανά, το μόνο που χρειαζόμαστε είναι να
 κατεβάσουμε το `binary` και να το βάλουμε στο `PATH` μας.
 
-Στο `Linux`:
+## Linux
 
 ```bash
 curl -Lo kubectl https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl && chmod +x kubectl
 ```
 
+## Mac OSX
+
 Για `OSX`: Ισχύουν πάλι τα ίδια, απλά αντικαταστείτε την λέξη
 `‘linux’` με `‘darwin’` στο `URL`.
 
-Ξεκινήστε το Kubernetes cluster με το Minikube
-----------------------------------------------
+# Ξεκινήστε το Kubernetes cluster με το Minikube
+
+## Χρησιμοποιώντας το VirtualBox
 
 Από προεπιλογή, το minikube χρησιμοποιεί τον `driver` του
 `VirtualBox`, το οποίο πρέπει να έχετε εγκατεστημένο και
@@ -265,8 +293,7 @@ H εκκίνηση του cluster παίρνει μερικά λεπτά ανα�
 αρέσει η ιδέα να εγκαταστήσουν το virtualbox στον υπολογιστή
 τους, υπάρχουν άλλες 2 επιλογές:
 
-Με docker έναντι του VirtualBox
--------------------------------
+## Με docker έναντι του VirtualBox
 
 Με αυτή την επιλογή, δεν χρειάζεται να χρησιμοποιήσετε καμία
 εικονική μηχανή, αλλά να φορτώσετε ολόκληρο το k8s cluster
@@ -344,8 +371,7 @@ CONTAINER ID        IMAGE                                         COMMAND       
 d854c94113ae        gcr.io/google_containers/pause-amd64:3.0      "/pause"                17 seconds ago      Up 16 seconds                           k8s_POD_kube-addon-manager-panos.suse.de_kube-system_c654b2f084cf26941c334a2c3d6db53d_0
 ```
 
-Με KVM έναντι του VirtualBox
-----------------------------
+## Με KVM έναντι του VirtualBox
 
 Τότε χρειάζεστε ένα ακόμα binary (`docker-machine-driver-kvm`) το οποίο
 επιτρέπει στο docker να μιλήσει με το `KVM`. Στην περίπτωση του `openSUSE 42.3`
@@ -416,8 +442,7 @@ Deleting local Kubernetes cluster...
 Machine deleted.
 ```
 
-Ελέγξετε αν το cluster σηκώθηκε και μπορεί να επικοινωνήσει με το kubectl
--------------------------------------------------------------------------
+# Ελέγξετε αν το cluster σηκώθηκε και μπορεί να επικοινωνήσει με το kubectl
 
 Για να επιβεβαιώσουμε ότι το cluster μας λειτουργεί
 κανονικά, μπορούμε να χρησιμοποιήσουμε την εντολή
@@ -426,13 +451,22 @@ Machine deleted.
 επίσης τις διευθύνσεις των επιμέρους εξαρτημάτων του
 Kubernetes, όπως τoν API Server και της web console.
 
-Windows
--------
+Στην συνέχεια του άρθρου θα χρησιμοποιήσουμε αποκλειστικά
+Windows, έτσι ώστε να κάνουμε τους φίλους αναγνώστες που
+χρησιμοποιούν το συγκεκριμένο λειτουργικό, να μην παρατήσουν
+την μέχρι τώρα προσπάθειά τους. Για όλους εσάς τους υπόλοιπους
+θα σας προτείνουμε να το διαβάσετε, καθώς τα ίδια πράγματα
+ισχύουν τόσο για Linux όσο και για Mac OSX. Πάμε λοιπόν
+να δούμε το στήσιμο του Minikube από την μεριά των Windows 10.
+
+# Αναλυτικές οδηγίες για χρήστες Windows (και όχι μόνο)
 
 Προς το παρόν, δουλεύουμε σε ένα PC με `Windows 10`,
 στο οποίο προϋπάρχει ήδη η απαραίτητη υποδομή 
 λογισμικού για την δημιουργία και τη διαχείριση
 εικονικών μηχανών `VirtualBox`.
+
+## Εγκατάσταση του Minikube
 
 Κατεβάζουμε το εκτελέσιμο αρχείο [minikube-windows-amd64.exe](https://storage.googleapis.com/minikube/releases/latest/minikube-windows-amd64.exe)
 και στην συνέχεια το μετονομάζουμε το σε `minikube.exe`.
@@ -472,6 +506,8 @@ C:\Users\drpan>PATH %PATH%;C:\minikube
 προσθέσει το συγκεκριμένο κατάλογο μόνο κατά το τρέχων
 στιγμιότυπο της γραμμής εντολών. Αν κλείσατε ή ανοίξατε
 κάποιο άλλο `cmd`, τότε θα πρέπει να την ξαναδώσετε.
+
+## Minikube και VirtualBox
 
 Το πρόγραμμα virtualization που θα χρησιμοποιήσουμε είναι
 το [VirtualBox](https://www.virtualbox.org/).
@@ -531,8 +567,7 @@ minikube όσον αφορά το virtualbox. Κάνοντας το,
 
 ![virtualbox root login](/virtualbox_minikube_vm.JPG)
 
-Αλληλεπίδραση με το cluster
----------------------------
+## Αλληλεπίδραση με το cluster
 
 Καθώς ξεκινήσαμε το minikube, θυμόμαστε ότι μας
 ενημέρωσε πως το `kubectl` δεν είναι εγκατεστημένο
@@ -628,6 +663,8 @@ Available Commands:
   update-context   Verify the IP address of the running cluster in kubeconfig.
   version          Print the version of minikube
 ```
+
+## Φορτώνοντας το Dashboard
 
 Οι παραπάνω εντολές, είναι στην ουσία ένας σύντομος
 και εύκολος τρόπος να κάνετε τα ίδια πράγματα που
