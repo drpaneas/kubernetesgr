@@ -1,7 +1,8 @@
 +++
 title = "Στήνοντας το minikube"
+slug = "Stinontas to minikube"
 description = "Πειραματιστείτε και δοκιμάστε το deployment ενός Kubernetes single-node cluster με το minikube"
-date = "2017-09-30"
+date = "2017-09-02"
 categories = [ "beginners", "how to" ]
 tags = [
     "kubernetes",
@@ -27,7 +28,7 @@ tags = [
   * [Χρησιμοποιώντας το VirtualBox](#χρησιμοποιώντας-το-virtualbox)
   * [Με docker έναντι του VirtualBox](#με-docker-έναντι-του-virtualbox)
   * [Με KVM έναντι του VirtualBox](#με-kvm-έναντι-του-virtualbox)
-- [Ελέγξετε αν το cluster σηκώθηκε και μπορεί να επικοινωνήσει με το kubectl](#[ελέγξετε-αν-το-cluster-σηκώθηκε-και-μπορεί-να-επικοινωνήσει-με-το-kubectl)
+- [Ελέγξετε αν το cluster σηκώθηκε και μπορεί να επικοινωνήσει με το kubectl](#ελέγξετε-αν-το-cluster-σηκώθηκε-και-μπορεί-να-επικοινωνήσει-με-το-kubectl)
 - [Αναλυτικές οδηγίες για χρήστες Windows και όχι μόνο](#αναλυτικές-οδηγίες-για-χρήστες-windows-και-όχι-μόνο)
   * [Εγκατάσταση του Minikube](#εγκατάσταση-του-minikube-1)
   * [Minikube και VirtualBox](#minikube-και-virtualbox)
