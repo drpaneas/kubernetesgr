@@ -14,25 +14,25 @@ tags = [
 +++
 
 - [Εισαγωγή](#Εισαγωγή)
-  * [Λίγα λόγια για το Minikube](#Λίγα λόγια για το Minikube)
-  * [Πώς λειτουργεί πίσω από την μηχανή](#Πώς λειτουργεί πίσω από την μηχανή)
-- [Εγκατάσταση του Minikube](#Εγκατάσταση του Minikube)
+  * [Λίγα λόγια για το Minikube](#Λίγα-λόγια-για-το-Minikube)
+  * [Πώς λειτουργεί πίσω από την μηχανή](#Πώς-λειτουργεί-πίσω-από-την-μηχανή)
+- [Εγκατάσταση του Minikube](#Εγκατάσταση-του-Minikube)
   * [Linux](#linux)
   * [Mac OSX](#mac-osx)
   * [Windows](#windows)
-- [Εγκαταστήστε τον Kubernetes client (kubectl)](#Εγκαταστήστε τον Kubernetes client -kubectl-)
+- [Εγκαταστήστε τον Kubernetes client](#Εγκαταστήστε-τον-Kubernetes-client)
   * [Linux](#linux-1)
   * [Mac OSX](#mac-osx-1)
-- [Ξεκινήστε το Kubernetes cluster με το Minikube](#Ξεκινήστε το Kubernetes cluster με το Minikube)
-  * [Χρησιμοποιώντας το VirtualBox](#Χρησιμοποιώντας το VirtualBox)
-  * [Με docker έναντι του VirtualBox](#Με docker έναντι του VirtualBox)
-  * [Με KVM έναντι του VirtualBox](#Με KVM έναντι του VirtualBox)
-- [Ελέγξετε αν το cluster σηκώθηκε και μπορεί να επικοινωνήσει με το kubectl](#[Ελέγξετε αν το cluster σηκώθηκε και μπορεί να επικοινωνήσει με το kubectl)
-- [Αναλυτικές οδηγίες για χρήστες Windows (και όχι μόνο)](#Αναλυτικές οδηγίες για χρήστες Windows -και όχι μόνο-)
-  * [Εγκατάσταση του Minikube](#Εγκατάσταση του Minikube-1)
-  * [Minikube και VirtualBox](#Minikube και VirtualBox)
-  * [Αλληλεπίδραση με το cluster](#Αλληλεπίδραση με το cluster)
-  * [Φορτώνοντας το Dashboard](#Φορτώνοντας το Dashboard)
+- [Ξεκινήστε το Kubernetes cluster με το Minikube](#Ξεκινήστε-το-Kubernetes-cluster-με-το-Minikube)
+  * [Χρησιμοποιώντας το VirtualBox](#Χρησιμοποιώντας-το-VirtualBox)
+  * [Με docker έναντι του VirtualBox](#Με-docker-έναντι-του-VirtualBox)
+  * [Με KVM έναντι του VirtualBox](#Με-KVM-έναντι-του-VirtualBox)
+- [Ελέγξετε αν το cluster σηκώθηκε και μπορεί να επικοινωνήσει με το kubectl](#[Ελέγξετε-αν-το-cluster-σηκώθηκε-και-μπορεί-να-επικοινωνήσει-με-το-kubectl)
+- [Αναλυτικές οδηγίες για χρήστες Windows και όχι μόνο](#Αναλυτικές-οδηγίες-για-χρήστες-Windows-και-όχι-μόνο)
+  * [Εγκατάσταση του Minikube](#Εγκατάσταση-του-Minikube-1)
+  * [Minikube και VirtualBox](#Minikube-και-VirtualBox)
+  * [Αλληλεπίδραση με το cluster](#Αλληλεπίδραση-με-το-cluster)
+  * [Φορτώνοντας το Dashboard](#Φορτώνοντας-το-Dashboard)
 
 # Εισαγωγή
 
@@ -251,7 +251,7 @@ curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/miniku
 αναλυτικά βήματα στο τέλος του άρθρου.
 
 
-# Εγκαταστήστε τον Kubernetes client (kubectl)
+# Εγκαταστήστε τον Kubernetes client
 
 Προκείμενου να αλληλεπιδράσουμε με το Kubernetes, χρειαζόμαστε
 επίσης και τον `kubectl`, o οποίος δεν είναι τίποτα περισσότερο
@@ -459,7 +459,7 @@ Windows, έτσι ώστε να κάνουμε τους φίλους αναγν�
 ισχύουν τόσο για Linux όσο και για Mac OSX. Πάμε λοιπόν
 να δούμε το στήσιμο του Minikube από την μεριά των Windows 10.
 
-# Αναλυτικές οδηγίες για χρήστες Windows (και όχι μόνο)
+# Αναλυτικές οδηγίες για χρήστες Windows και όχι μόνο
 
 Προς το παρόν, δουλεύουμε σε ένα PC με `Windows 10`,
 στο οποίο προϋπάρχει ήδη η απαραίτητη υποδομή 
