@@ -1,5 +1,5 @@
 baseurl = "https://www.kubernetes.gr/"
-languageCode = "en-us"
+languageCode = "el"
 title = "kubernetes.gr"
 theme = "classic_fork"
 googleAnalytics = "UA-60257842-2"
